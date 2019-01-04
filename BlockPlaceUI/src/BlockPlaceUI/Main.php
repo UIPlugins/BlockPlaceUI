@@ -52,7 +52,6 @@ class Main extends PluginBase implements Listener
             $form->setTitle("BlockPlaceUI");
             $form->setContent("Are you sure you want to place this block?");
 
-            //$form->registerButtons(['Yes', 'No']);
             $form->setImage($form::YES, false, "textures/ui/checkboxFilledYellow");
             $form->setImage($form::NO, false, "textures/ui/checkboxUnFilled");
             $player->sendForm($form);
