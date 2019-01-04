@@ -34,13 +34,11 @@ class Main extends PluginBase implements Listener
             $event->setCancelled(true);
 
             $form = new YesNoForm(function(Player $player, $data){
-                switch ($data) {
-                    case 0:
-                        $rand = rand(0, 500);
-                        if ($rand === 5) {
-                            array_push(self::$lol, $player->getName());
-                        }
-                        break;
+                if ($data) {
+                    $rand = rand(0, 500);
+                    if ($rand === 5) {
+                        array_push(self::$lol, $player->getName());
+                    }
                 }
             });
 
