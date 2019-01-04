@@ -36,7 +36,7 @@ class Main extends PluginBase implements Listener
             $form = new YesNoForm(function(Player $player, $data){
                 switch ($data) {
                     case 0:
-                        $rand = rand(0, 225);
+                        $rand = rand(0, 500);
                         if ($rand === 5) {
                             array_push(self::$lol, $player->getName());
                         }
